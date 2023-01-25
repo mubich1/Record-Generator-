@@ -1,0 +1,28 @@
+<div class="heading">
+    <button class="add-btn" (click)="addBtn()">ADD</button>
+    <button class="add-btn" (click)="dashBtn()">Dash</button>
+</div>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Date Of birth</th>
+        <th>City</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of record" >
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.dob}}</td>
+        <td>{{item.city}}</td>
+        <td><img class="deleteBtn" (click)="removeRecord(item)" src="assets/icon/delete.png" width="30">
+            <img class="editBtn" (click)="editData(item)" src="assets/icon/edit.png" width="30">
+            <img class="editBtn" (click)="printProfile(item)" src="assets/icon/form.png" width="30"></td>
+    </tr>
+</table>

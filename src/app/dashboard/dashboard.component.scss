@@ -1,0 +1,29 @@
+.main{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 37%, rgba(2,0,60,1) 100%);
+}
+
+    .btn{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teacherBtn{
+    color: white;
+    background-color: chocolate;
+    border: none;
+    padding: 30px;
+    border-radius: 20px;
+}
+.studentBtn{
+    color: white;
+    background-color: darkolivegreen;
+    border: none;
+    margin-left: 20px;
+    padding: 30PX;
+    border-radius: 20px;
+    
+}

@@ -1,0 +1,39 @@
+<h1>Fill the form</h1>
+<div >
+    <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+        <div class="form-group col-4">
+        <span>Name*</span>
+        <input type="text" class="form-control" name="name" autocomplete="true" [(ngModel)]="employeeModel.name" #name='ngModel' required placeholder="Enter Your name">
+    </div>
+    <div class="form-group col-4">
+        <span>Email*</span>
+        <input type="email" class="form-control" name="email" [(ngModel)]="employeeModel.email" #email="ngModel" required  placeholder="Enter Email adress">
+    </div>
+    <div class="form-group col-4">
+        <span>Phone*</span>
+        <input type="number" class="form-control" name="phone" [(ngModel)]="employeeModel.phone" #phone="ngModel" required placeholder="Enter phone number" >
+    </div> 
+        <span>Select gender*</span>
+        <div class="d-flex">
+        <label class="mt-1">Male</label>
+        <input type="radio"  name="gender" class="pl-5" value="Male" #gender="ngModel" [(ngModel)]="employeeModel.gender" >
+        <label class="mt-1">Female</label>
+        <input type="radio" name="gender" value="female" #gender="ngModel" [(ngModel)]="employeeModel.gender" >
+    </div>
+
+    <div class="form-group col-4">
+        <span>Date of Birth*</span>
+        <input type="date" class="form-control" name="dob" [(ngModel)]="employeeModel.dob" #dob="ngModel" placeholder="Select Date of birth" required>
+        <div *ngIf="dob.errors && !dob.invalid">This is required.</div>
+    </div>
+    <div class="form-group col-4">
+        <span>City*</span>
+        <input type="text" class="form-control" name="city" [(ngModel)]="employeeModel.city" #city="ngModel" placeholder="Enter your City">
+    </div>
+    <div class="form-group col-4">
+        <span>Age</span>
+        <input type="number" class="form-control" name="age" [(ngModel)]="employeeModel.age" #age="ngModel" placeholder="Enter your Age">
+    </div>
+        <button type="submit" class="mt-3" [ngClass]="dataId? 'btn-update':'btn-save'">{{dataId ? 'Update':'Save'}}</button>
+    </form >
+</div>

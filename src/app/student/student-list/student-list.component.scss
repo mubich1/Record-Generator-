@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+  }
+.btnStyle{
+  cursor: pointer;
+  margin-left: 10px;
+}
+th.mat-sort-header-sorted {
+  color: black;
+}
+.searchFilter{
+  display: flex;
+  justify-content: end;
+}
+.btt i{
+  font-size: 50px;
+}
+.heading{
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 5px;
+}
